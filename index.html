@@ -7,18 +7,21 @@
     <style>body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 h1 {
   color: #333;
 }
-#file-list {
-  list-style-type: disc;
-  padding-left: 20px;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 li {
-  font-size: 1.2em;
-  margin-bottom: 8px;
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }</style>
 </head>
 <body>
@@ -37,12 +40,12 @@ li {
 </body>
 </html>
     <script>document.addEventListener('DOMContentLoaded', () => {
+  const fileList = document.getElementById('file-list');
   const files = ['config.json', 'data.csv'];
-  const listContainer = document.getElementById('file-list');
   files.forEach(file => {
-    const listItem = document.createElement('li');
-    listItem.textContent = file;
-    listContainer.appendChild(listItem);
+    const li = document.createElement('li');
+    li.textContent = file;
+    fileList.appendChild(li);
   });
 });</script>
 </body>
