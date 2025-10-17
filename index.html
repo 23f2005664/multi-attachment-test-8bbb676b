@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated App</title>
+    <style>body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+h1 {
+  color: #333;
+}
+#file-list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+li {
+  font-size: 1.2em;
+}</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>File List</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Attached Files</h1>
+<ul id="file-list"></ul>
+<script src="script.js"></script>
+</body>
+</html>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+  const files = ['config.json', 'data.csv'];
+  const listContainer = document.getElementById('file-list');
+  files.forEach(file => {
+    const listItem = document.createElement('li');
+    listItem.textContent = file;
+    listContainer.appendChild(listItem);
+  });
+});</script>
+</body>
+</html>
